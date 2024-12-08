@@ -12,6 +12,9 @@
     <div class="card-body">
         <h2><a href="/news/{{ $item->id }}">{{ $item->title }}</a></h2>
         <p>{{ Str::limit($item->content, 150) }}</p>
+        <div>
+            <img src="{{ $item->image }}" alt="" style="width: 200px;">
+        </div>
         <small>Danh mục: {{ $item->category->name }} | Ngày tạo: {{ $item->created_at }}</small>
     </div>
 </div>
